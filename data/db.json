@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "description": "Wash the car",
+        "createdAt": "2026-07-15T12:30:05.462Z",
+        "updatedAt": null
+    },
+    {
+        "id": 2,
+        "description": "Bath the Dog",
+        "createdAt": "2026-07-15T12:30:05.489Z",
+        "updatedAt": null
+    },
+    {
+        "id": 3,
+        "description": "Code for a leaving",
+        "createdAt": "2026-07-15T12:30:05.491Z",
+        "updatedAt": null
+    },
+    {
+        "id": 1,
+        "description": "Wash the car",
+        "createdAt": "2026-07-15T12:30:28.902Z",
+        "updatedAt": null
+    },
+    {
+        "id": 2,
+        "description": "Bath the Dog",
+        "createdAt": "2026-07-15T12:30:28.917Z",
+        "updatedAt": null
+    },
+    {
+        "id": 3,
+        "description": "Code for a leaving",
+        "createdAt": "2026-07-15T12:30:28.919Z",
+        "updatedAt": null
+    }
+]
