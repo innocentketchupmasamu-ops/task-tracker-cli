@@ -19,6 +19,16 @@ function generateID(tasks){
 
     return nextID
 }
+function verifyTask(task){
+    if(!task){
+        console.log("Task not found.")
+        return false;
+    } 
+
+    return true;
+}
+
 module.exports = {
-    generateID
+    generateID,
+    verifyTask
 }

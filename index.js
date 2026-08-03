@@ -9,5 +9,7 @@ const task = {
     updatedAt: "--:--"
 }
 
+const newDescription = "Vote Bally!"
 
 taskManager.addTask(task)
+taskManager.updateTask(newDescription, 100)
