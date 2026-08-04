@@ -9,7 +9,7 @@ function addTask(task){
     task.id = utils.generateID(tasks)
     tasks.push(task)
     fileHandler.saveTasks(tasks)
-
+    console.log("A task has been added.")
 };
 
 function updateTask(taskID, changes){
@@ -37,10 +37,26 @@ function updateTask(taskID, changes){
    
     task.updatedAt = new Date().toISOString();
     fileHandler.saveTasks(tasks)
-    
+    console.log("A task has been updated.")
+
 };
+
+function deleteTask(taskID){
+
+    tasks = fileHandler.readTasks()
+
+    task = tasks.find(t => t.id === taskID)    
+    if (!utils.verifyTask(task)){
+        return;
+    }
+    tasks.splice(tasks.indexOf(task), 1)
+
+    fileHandler.saveTasks(tasks)
+    console.log("A task has been deleted!")
+}
 
 module.exports = {
     addTask,
-    updateTask
+    updateTask,
+    deleteTask
 };

@@ -12,7 +12,7 @@ function saveTasks(tasks){
 
     const updatedTask = JSON.stringify(tasks, null, 4);
     fs.writeFileSync("./data/db.json", updatedTask)
-    console.log(`A task has been saved successfully!`)
+   
 }
 
 module.exports = {
