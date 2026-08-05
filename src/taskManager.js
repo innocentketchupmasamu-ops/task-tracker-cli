@@ -12,10 +12,13 @@ function addTask(task){
     console.log("A task has been added.")
 };
 
-function updateTask(taskID, changes){
-    const tasks = fileHandler.readTasks()
 
-    const task = tasks.find(t => t.id === taskID)
+
+function updateTask(taskID, changes){
+
+
+    const tasks = fileHandler.readTasks()
+    const task = utils.findTask(tasks, taskID);
 
     if (!utils.verifyTask(task)){
         return;
@@ -41,11 +44,12 @@ function updateTask(taskID, changes){
 
 };
 
+
 function deleteTask(taskID){
 
-    tasks = fileHandler.readTasks()
+    const tasks = fileHandler.readTasks()
+    const task = utils.findTask(tasks, taskID);
 
-    task = tasks.find(t => t.id === taskID)    
     if (!utils.verifyTask(task)){
         return;
     }
@@ -55,8 +59,29 @@ function deleteTask(taskID){
     console.log("A task has been deleted!")
 }
 
+
+function listTasks(){
+
+    tasks = fileHandler.readTasks()
+    if(tasks.length === 0 ){
+        console.log("No tasks found");
+        return;
+    }
+    console.log("--------------------Tasks--------------------")
+    for (const task of tasks){
+        console.log(`
+----------------------------------
+ID: ${task.id}
+Description: ${task.description}
+status: ${task.status}
+            `)
+    }
+
+}
+
 module.exports = {
     addTask,
     updateTask,
-    deleteTask
+    deleteTask,
+    listTasks
 };

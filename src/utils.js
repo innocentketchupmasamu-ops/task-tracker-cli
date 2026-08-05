@@ -27,8 +27,13 @@ function verifyTask(task){
 
     return true;
 }
+ function findTask(tasks, taskID){
+    task = tasks.find(t => t.id === taskID)
+    return task;
+ }
 
 module.exports = {
     generateID,
-    verifyTask
+    verifyTask,
+    findTask
 }

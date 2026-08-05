@@ -15,7 +15,9 @@ const changes = {
 
 }
 
+
 taskManager.addTask(task)
 taskManager.updateTask(2, changes)
 
-taskManager.deleteTask(8)
+taskManager.deleteTask(3)
+taskManager.listTasks()
