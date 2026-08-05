@@ -3,10 +3,20 @@ const fileHandler = require('./fileHandler');
 const utils = require("./utils");
 
 
-function addTask(task){
-
+function addTask(description){
+  
     const tasks = fileHandler.readTasks();
-    task.id = utils.generateID(tasks)
+
+    const task = {
+    id: utils.generateID(tasks),
+    description,
+    status: "todo",
+    createdAt: new Date().toISOString(),
+    updatedAt: "--:--"
+
+    }
+    
+
     tasks.push(task)
     fileHandler.saveTasks(tasks)
     console.log("A task has been added.")

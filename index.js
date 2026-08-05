@@ -1,14 +1,5 @@
 const taskManager = require("./src/taskManager")
 
-
-const task = {
-    id: 1,
-    description:"Wash the car",
-    status: "todo",
-    createdAt: "12:30",
-    updatedAt: "--:--"
-}
-
 const changes = {
     
     description : "Change the engine oil",
@@ -16,8 +7,9 @@ const changes = {
 }
 
 
-taskManager.addTask(task)
+taskManager.addTask("learn node")
+
 taskManager.updateTask(2, changes)
 
-taskManager.deleteTask(3)
+// taskManager.deleteTask(3)
 taskManager.listTasks()
